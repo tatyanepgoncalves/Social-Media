@@ -1,0 +1,19 @@
+
+html[data-theme="dark"] {
+  body {
+    background-color: $DarkBg;
+    color: #fff;
+  }
+}
+
+html[data-theme="light"] {
+
+  body {
+    background-color: $LightBg;
+    color: $LightText;
+  }
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
