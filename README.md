@@ -1,7 +1,7 @@
 <img src="./public/preview.jpg">
 
 # Painel de mídia social 
-Este desafio foi desenvolvida praticar  habilidades de Grid, React, TypeScript.
+Este desafio foi desenvolvido para praticar habilidades de Grid, React, TypeScript.
 
 ## 🔥 Introdução
 
