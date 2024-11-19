@@ -1,0 +1,125 @@
+@import "../../styles/variables";
+
+.SecondSection {
+  margin-top: 2rem;
+
+  h2 {
+    margin-bottom: .8rem;
+  }
+}
+
+.pageBox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+}
+
+.pageItem {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 1rem;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    font-weight: 700;
+  }
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  .data {
+    img {
+      margin-right: 1rem;
+    }
+  
+    span {
+      color: $LimeGreen;
+      font-weight: 700;
+    }
+  }
+}
+
+
+.pageItem:nth-child(2) {
+  .bottom {
+    .data {
+      span {
+        color: $BrightRed;
+      }
+    }
+  }
+}
+
+.pageItem:nth-child(7) {
+  .bottom {
+    .data {
+      span {
+        color: $BrightRed;
+      }
+    }
+  }
+}
+
+.pageItem:nth-child(8) {
+  .bottom {
+    .data {
+      span {
+        color: $BrightRed;
+      }
+    }
+  }
+}
+
+html[data-theme="dark"] {
+  .pageItem {
+    background-color: $DarkCard;
+  }
+  
+  .top {
+    p {
+      color: $DarkText;
+    }
+  }
+
+  .bottom {
+    h2 {
+      color: #fff;
+    }
+  }
+}
+
+html[data-theme="light"] {
+  .pageItem {
+    background-color: $LightCard;
+  }
+  
+  .bottom {
+    h2 {
+      color: $LightText2;
+    }
+  }
+}
+
+
+@media (width <=768px) {
+  .SecondSection {
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .pageBox {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+}
