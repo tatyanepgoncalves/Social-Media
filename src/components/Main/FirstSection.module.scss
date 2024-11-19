@@ -1,0 +1,112 @@
+@import "../../styles/variables";
+
+.FirstSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.boxId {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 4rem 0;
+  border-radius: 1rem;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  span {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: .5rem;
+
+  h2 {
+    font-size: 5rem;
+  }
+
+  p {
+    letter-spacing: 0.3rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+}
+
+.bottom {
+  img {
+    margin-right: 1rem;
+  }
+  
+  span {
+    font-weight: 700;
+    color: $LimeGreen;
+  }
+}
+
+.boxId:nth-child(1){
+  border-top: 1rem solid $Facebook;
+}
+.boxId:nth-child(2){
+  border-top: 1rem solid $Twitter;
+}
+.boxId:nth-child(3){
+  border-top: 1rem solid $Instagram;
+}
+.boxId:nth-child(4){
+  border-top: 1rem solid $YouTube;
+
+  .bottom {
+    span {
+      color: $BrightRed;
+    }
+  }
+}
+
+html[data-theme="dark"] {
+  .boxId {
+    background-color: $DarkCard;
+  }
+
+  .top {
+    span {
+      color: $DarkText;
+    }
+  }
+
+  .title {
+    p {
+      color: $DarkText;
+    }
+  }
+}
+
+html[data-theme="light"] {
+  .boxId {
+    background-color: $LightCard;
+  }
+
+  .title {
+    h2 {
+      color: $LightText2;
+    }
+  }
+}
+
+@media (width <=768px) {
+  .FirstSection {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+}
